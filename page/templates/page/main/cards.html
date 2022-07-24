@@ -1,0 +1,82 @@
+{% extends "page/index.html" %}
+{% load static %}
+{% block cards %}
+<div class="row justify-content-evenly">
+
+    <div class="card" style="width: 18rem;">
+      <table class="table">
+        <tbody>
+        <tr class="table-primary fs-4 fw-bold">
+            <td>Total</td>
+            <td>{{total}}</td>
+        </tr>
+        <tr>
+            <td>Car</td>
+            <td>{{car}}</td>
+        </tr>
+        <tr>
+            <td>Van</td>
+            <td>{{van}}</td>
+        </tr>
+        <tr>
+            <td>Bike</td>
+            <td>{{bike}}</td>
+        </tr>
+        <tr>
+            <td>Truck</td>
+            <td>{{truck}}</td>
+        </tr>
+        <tr>
+            <td>Bus</td>
+            <td>{{bus}}</td>
+        </tr>
+        </tbody>
+    </table>
+      </div>
+
+      <div class="card button_card" style="width: 18rem;">
+        <ul class="list-group list-group-flush button_list">
+            <li class="list-group-item"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#overSpeed">Over speed vehicles</button></li>
+            <li class="list-group-item"><button type="button" class="btn btn-primary">Show datasheet</button></li>
+            <li class="list-group-item"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vehicleChart">View chart</button></li>
+        </ul>
+
+      </div>
+
+</div>
+
+<div class="modal fade"  id="overSpeed" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+      <div class="modal-content" style="width: 600px;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Over Speed Vehicles</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div total="{{total}}" car="{{car}}" van="{{van}}" bike="{{bike}}" truck="{{truck}}" bus="{{bus}}"  class="modal fade"  id="vehicleChart" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+      <div class="modal-content" style="width: 600px;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Vehicle Chart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div id="piechart"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+    
+{% endblock %}

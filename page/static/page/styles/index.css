@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    background: rgb(176,176,176);
+    background: linear-gradient(90deg, rgba(176,176,176,1) 0%, rgba(154,184,183,1) 47%, rgba(219,217,255,1) 100%);
+}
+/* .card_main{
+    background-color: rgb(94, 92, 92);
+}
+.card_text{
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: rgb(211, 211, 211);
+}
+.vehical_details{
+    position: relative;
+
+}
+.vehical_details img{
+    width: 150px;
+    height: 100px;
+}
+.vehical_text{
+    position: absolute;
+    top: 35px;
+    left: 12px;
+    color: rgb(0, 0, 0);
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.7);
+} */
+
+.button_list{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.button_list button{
+    width: 15rem;
+}
+h2{
+    text-align: left;
+}
+#piechart{
+    margin-left: auto;
+    margin-right: auto;
+}
